@@ -1,0 +1,75 @@
+/* style.css */
+
+/* --- General Styles (add your own) --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: white;
+}
+
+/* --- 16:9 Video Player Frame --- */
+.video-container {
+    /* Use max-width to control the player size */
+    max-width: 1000px;
+    margin: 20px auto;
+    position: relative; /* For the player and watermark children */
+    width: 100%;
+    /* The 16:9 padding hack: 9 / 16 = 0.5625 = 56.25% */
+    padding-bottom: 56.25%; 
+    height: 0;
+    background-color: black;
+}
+
+.video-frame,
+.watermark,
+.media-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* The embedded player/iframe */
+.video-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Watermark Positioning */
+.watermark {
+    pointer-events: none; /* Allows clicks to go through to the iframe */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 10;
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Specific position adjustments for watermarks */
+.watermark.bottom-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+/* --- Highlight Story Cards --- */
+.highlight-stories {
+    display: flex;
+    overflow-x: scroll; /* For story-like horizontal scrolling */
+    padding: 10px;
+}
+.highlight-card {
+    min-width: 80px; /* Smaller size */
+    height: 120px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #ff4500; /* Highlighted border */
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Live Match Stream</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header><h1>Match Title Placeholder</h1></header>
+
+    <div id="video-wrapper" class="video-container">
+        <div id="video-frame" class="video-frame">
+            <div id="match-status" style="display: flex; justify-content: center; align-items: center; height: 100%; font-size: 2em;">Loading...</div>
+        </div>
+
+        <div id="watermark-overlay" class="watermark">
+            </div>
+
+        <div id="user-controls" class="media-controls">
+            <button id="btn-refresh">🔄 Live Refresh</button>
+            <button id="btn-mute">🔇 Mute/Unmute</button>
+            <button id="btn-fullscreen">📺 Fullscreen</button>
+        </div>
+    </div>
+
+    <div id="server-selector">
+        <h2>Choose Server:</h2>
+        </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

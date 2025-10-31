@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Streamer Home - Live Matches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>⚽ Live Stream Hub</h1>
+            </nav>
+    </header>
+
+    <main>
+        <section class="highlights-section">
+            <h2>🔥 Highlights</h2>
+            <div id="highlight-stories" class="highlight-stories">
+                <p id="highlights-loading">Loading highlights...</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="matches-section">
+            <h2>📺 Live & Upcoming Matches</h2>
+            <div id="match-cards-container" class="match-cards-container">
+                <p id="matches-loading">Loading match schedules...</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="news-section">
+            <h2>📰 Latest News & Updates</h2>
+            <div id="news-posts-container" class="news-posts-container">
+                <p id="news-loading">Loading news posts...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sports Streamer. All rights reserved.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
